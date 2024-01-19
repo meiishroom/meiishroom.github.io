@@ -1,0 +1,14 @@
+:root{
+    --primary-blk: #262626;
+    --primary-purple: #b8a9d9;
+    --gold: #f2b66d;
+    --off-white: #f2f2f2;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body,h1,h2,h3,p{
+    margin: 0;
+}
