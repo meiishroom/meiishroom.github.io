@@ -1,0 +1,105 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --font-size: 0.9375rem;
+  --fweight-400: 400;
+  --fweign-700: 700;
+  --lexen: "Lexend Deca", sans-serif;
+  --bshoulder: "Big Shoulders Display", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--lexen);
+  font-size: var(--font-size);
+  color: white;
+  
+}
+
+section {
+  padding: 2.3em;
+  
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-family: var(--bshoulder);
+}
+
+p {
+  margin-bottom: 4em;
+  opacity: 80%;
+  font-weight: 100;
+}
+
+.p-width {
+  width: 100%;
+  max-width: 70%;
+}
+
+a {
+  background-color: white;
+  display: inline-block;
+  padding: 0.8em 2em;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+.splitter {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.col-1 {
+  background-color: var(--Bright-orange);
+  
+  
+}
+.col-1 a {
+  color: var(--Bright-orange);
+}
+
+.col-2 {
+  background-color: var(--Dark-cyan);
+ 
+ 
+}
+.col-2 a {
+  color: var(--Dark-cyan);
+}
+
+.col-3 {
+  background-color: var(--Very-dark-cyan);
+}
+.col-3 a {
+  color: var(--Very-dark-cyan);
+}
+
+a:hover {
+  opacity: 90%;
+}
+
+a:active {
+  opacity: 100%;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 800px) {
+  .splitter {
+    display: flex;
+    flex-direction: row;
+   
+  }
+
+
+}/*# sourceMappingURL=3-column.css.map */
