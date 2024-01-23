@@ -1,8 +1,12 @@
 :root {
-  --primary-blk: #262626;
+  --primary-blk: #353135;
   --primary-purple: #b8a9d9;
   --gold: #f2b66d;
   --off-white: #f2f2f2;
+  --cantarell: "Cantarell", sans-serif;
+  --fjalla: "Fjalla One", sans-serif;
+  --h1: clamp(2.25rem, 6vw,4.7rem);
+  --p: clamp(.65rem,6vw,1.3rem);
 }
 
 html {
@@ -11,16 +15,30 @@ html {
 
 body, h1, h2, h3, p {
   margin: 0;
+  font-family: var(--cantarell);
+}
+
+p {
+  font-size: var(--p);
 }
 
 .container {
-  width: min(90%, 1000px);
+  width: min(95%, 1000px);
   margin-inline: auto;
-  border: 1px solid red;
+}
+
+img {
+  width: 50%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
 }
 
 section {
-  padding: 2em 0;
+  padding: clamp(3em, 10vw, 7em) 0;
 }
 
 .flex-row {
@@ -28,23 +46,45 @@ section {
   justify-content: space-between;
 }
 
+h1 {
+  font-size: var(--h1);
+  font-family: var(--fjalla);
+  color: var(--primary-purple);
+}
+
+.col2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.image {
+  background-image: url(./images/2x2.jpg);
+  width: 200px;
+  height: 200px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: cover;
+  border-radius: 1000px;
+  overflow: hidden;
+  border: 15px solid var(--primary-purple);
+}
+
 .nav_list {
   list-style: none;
-  border: 1px solid red;
 }
 
 .nav_items a {
   text-decoration: none;
-  border: 2px solid blue;
   padding: 0 1em;
+  color: white;
 }
 
 .nav_items + .nav_items {
   margin-left: 1em;
-}
-
-main {
-  background-color: pink;
 }
 
 aside {
@@ -52,5 +92,32 @@ aside {
 }
 
 header {
-  background-color: #b8a9d9;
+  background-color: var(--primary-blk);
+  color: white;
+}
+
+footer {
+  background-color: var(--off-white);
+}
+
+@media (min-width: 900px) {
+  .flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .col1 {
+    width: 55%;
+  }
+  .col2 {
+    width: 40%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
+  .image {
+    width: 300px;
+    height: 300px;
+  }
 }/*# sourceMappingURL=resume-style.css.map */
