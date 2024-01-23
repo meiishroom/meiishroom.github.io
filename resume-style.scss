@@ -19,6 +19,8 @@ body,h1,h2,h3,p{
     border: 1px solid red;
 }
 
+
+
 section{
     padding: 2em 0;
 }
@@ -40,7 +42,18 @@ section{
 
 }
 
-
-    .nav_items + .nav_items{
+.nav_items + .nav_items{
         margin-left: 1em;
-    }
+}
+
+main{
+    background-color: pink;
+}
+
+aside{
+    background-color: peru;
+}
+
+header{
+    background-color: #b8a9d9;
+}

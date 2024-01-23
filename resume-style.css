@@ -41,4 +41,16 @@ section {
 
 .nav_items + .nav_items {
   margin-left: 1em;
+}
+
+main {
+  background-color: pink;
+}
+
+aside {
+  background-color: peru;
+}
+
+header {
+  background-color: #b8a9d9;
 }/*# sourceMappingURL=resume-style.css.map */
