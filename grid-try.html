@@ -8,6 +8,9 @@
       .container {
         width: min(90%, 1000px);
         margin-inline: auto;
+      }
+
+      .main-grid {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: 2fr 2fr 1fr;
@@ -18,8 +21,49 @@
           "div_3    div_3   div_3";
       }
 
+      .grid-2 {
+        display: grid;
+        grid-gap: 10px;
+        /*grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 120px); */
+
+        grid-template-areas:
+          "item1 item2 item2 item2 item3"
+          "item1 item4 item5 item5 item3"
+          "item1 item4 item5 item5 item3";
+      }
+
+      .div_item1 {
+        grid-area: item1;
+      }
+
+      .div_item2 {
+        grid-area: item2;
+      }
+
+      .div_item3 {
+        grid-area: item3;
+      }
+      .div_item4 {
+        grid-area: item4;
+      }
+      .div_item5 {
+        grid-area: item5;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 20px;
+      }
+
+      .autfit {
+      }
+
       .container > * {
         background-color: pink;
+        padding: 2em 1em;
+        border-radius: 20px;
       }
 
       .div_1 {
@@ -33,11 +77,34 @@
       .div_3 {
         grid-area: div_3;
       }
+
+      section + section {
+        margin-top: 20px;
+      }
+
+      @media (max-width: 1000px) {
+        .main-grid {
+          grid-template-areas:
+            "div_1    div_1   div_1"
+            "div_2    div_2   div_2"
+            "div_3    div_3   div_3";
+        }
+
+        .grid-2 {
+          grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5";
+        }
+      }
     </style>
   </head>
   <body>
     <section>
-      <div class="container">
+      <h2>USING GRID AREA TEMPLATE</h2>
+      <div class="container main-grid">
         <div class="div_1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
           repellendus molestias neque soluta exercitationem modi laborum cum!
@@ -94,6 +161,51 @@
           eligendi temporibus quibusdam recusandae quod? Quisquam, eaque.
           Perferendis tempora itaque veritatis consequuntur saepe ipsam.
         </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>SPANNING</h2>
+      <div class="container grid-2">
+        <div class="div_item1">
+          <h3>DIV1</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+          dolor.
+        </div>
+        <div class="div_item2">
+          <h3>DIV2</h3>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
+          possimus?
+        </div>
+        <div class="div_item3">
+          <h3>DIV3</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iusto.
+        </div>
+        <div class="div_item4">
+          <h3>DIV4</h3>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
+          reprehenderit!
+        </div>
+        <div class="div_item5">
+          <h3>DIV5</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+          quisquam?
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-3">
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
+        <div class="autfit"></div>
       </div>
     </section>
   </body>
