@@ -10,7 +10,7 @@
     //font sizes
 
     --h1: clamp(2.25rem, 6vw,4.7rem);
-    --p: clamp(.65rem,6vw,1.3rem);
+    --p: clamp(.65rem,6vw,1.1rem);
 }
 
 html{
@@ -27,7 +27,7 @@ p{
 }
 
 .container{
-    width: min(95%, 1000px);
+    width: min(90%, 1000px);
     margin-inline: auto;
     // border: 1px solid red;
 }
@@ -45,12 +45,13 @@ img{
 }
 
 section{
-    padding: clamp(3em,10vw,7em) 0;
+    padding: clamp(3em,10vw,4em) 0;
 }
 
 .flex-row{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    
 }
 
 h1{
@@ -59,11 +60,6 @@ h1{
     color: var(--primary-purple);
 }
 
-
-.head-page{
-
-    
-}
 
 .col1{
    
@@ -113,10 +109,68 @@ h1{
 
 main{
     // background-color: pink;
+    margin-top: 5em;
+    
 }
 
-aside{
-    background-color: peru;
+main> section{
+    padding: 0;
+}
+
+.main-grid{
+    display: grid;
+    grid-gap: clamp(1rem, 4vw,2rem);
+     grid-template-columns: 1fr 1fr 300px;
+    // grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-areas: "main main main"
+    "side side side"
+    "skill skill skill";
+}
+
+.seminars{
+    grid-area: main;
+    padding: 0;
+}
+
+.skills{
+    grid-area: skill;
+}
+
+.side{
+    padding: 0;
+    grid-area: side;
+    background-color: var(--off-white);
+ 
+}
+
+.article_items{
+    padding-left: 1em;
+}
+
+.article_items:hover{
+    background-color: var(--off-white);
+}
+
+.sub-title{
+    margin-bottom: 1em;
+    background-color: var(--primary-blk);
+    color: white;
+    border-left: 8px solid var(--primary-purple);
+    padding-left: 1rem;
+}
+
+.article_items + .article_items {
+    margin-top: 1em;
+}
+
+.edu_items{
+    padding-left: 1em;
+
+}
+
+.edu_items + .edu_items{
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 header{
@@ -128,32 +182,49 @@ footer{
     background-color: var(--off-white);
 }
 
+
+
 @media (min-width:900px){
     .flex{
        flex-direction: row;
         justify-content: space-between;
     }
 
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+    .col1{
+        // border: 3px solid red;
+        width: 55%;
+    }
+
+    .col2{
+        width: 40%;
+    align-items: center;
+        justify-content: flex-end;
+    }
+
+    h1{
+        margin-bottom: 1rem;
     
-.col1{
-    // border: 3px solid red;
-    width: 55%;
- }
+    }
+    
+    .image{
+        width: 300px;
+        height: 300px;
 
- .col2{
-    width: 40%;
-   align-items: center;
-    justify-content: flex-end;
- }
+    }
 
- h1{
-    margin-bottom: 1rem;
-   
- }
- 
-.image{
-    width: 300px;
-    height: 300px;
+    .main-grid{
+      
+        grid-template-areas: "main main side"
+        "main main side"
+        "skill skill skill";
+    }
 
-}
+
 }

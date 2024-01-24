@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .container {
+      margin: auto 0;
+      margin-inline: auto;
+      width: min(90%, 400px);
+
+      padding: 3em;
+
+      background-color: pink;
+      border-radius: 8px;
+      border-bottom-right-radius: 1000px;
+      position: relative;
+      display: flex;
+    }
+
+    .felx {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .img {
+      width: 100px;
+      height: 100px;
+      background-color: peru;
+      border: 5px solid pink;
+      border-radius: 100px;
+      position: absolute;
+      display: block;
+
+      top: 0;
+      left: 50%;
+      transform: translate(-150%, -50%);
+    }
+
+    section {
+      padding: 10em 0;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="container felx">
+        <div class="img"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+          nesciunt dolores est aliquam velit magnam unde inventore quidem
+          recusandae sunt!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
